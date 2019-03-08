@@ -75,7 +75,7 @@ const path = require("path");
 module.exports = {
   entry: "./src/assets/js/index.js",
   output: {
-    path: path.resolve(__dirname, "docs/"),
+    path: path.resolve(__dirname, "dist/"),
     filename: "assets/js/bundle.js",
     publicPath: ""
 };
