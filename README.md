@@ -3,6 +3,24 @@
 ![Berlin](https://img.shields.io/badge/Built%20in-Berlin-critical.svg?logo=webpack) ![Code size](https://img.shields.io/github/languages/code-size/leandroDCI/webpack4-boilerplate.svg) [![MIT License](https://img.shields.io/github/license/leandroDCI/webpack4-boilerplate.svg)](LICENSE)
 
 
+- [Features](#features)
+- [Project Structure](#project-structure)
+    - [Commands](#commands)
+        - [Development](#development)
+        - [Production](#production)
+        - [Deploy to Github Pages](#deploy-to-github-pages)
+- [Setup](#setup)
+    - [Quick Setup](#quick-setup)
+    - [Complete setup](#complete-setup)
+        - [Create your package.json and customize it](#create-your-packagejson-and-customize-it)
+        - [Install Webpack](#install-webpack)
+        - [Create files](#create-files)
+        - [Add HTML to your generated Bundle](#add-html-to-your-generated-bundle)
+        - [Transplate your JS with Babel](#transplate-your-js-with-babel)
+        - [Styling: import and inject CSS](#styling-import-and-inject-css)
+        - [Import images](#import-images)
+        - [Optimize CSS and Javascript assets](#optimize-css-and-javascript-assets)
+        - [Deploy to Github Pages](#deploy-to-github-pages-1)
 
 ## Features
 
@@ -59,7 +77,7 @@ npm run build
 
 #### Deploy to Github Pages
 
-To deploy your code to **Github Pages**: it create a 'gh-pages' branch and serve the production bundle to it
+To deploy your code to **Github Pages**: it create a 'gh-pages' branch and serve the production bundle
 
 ```
 npm deploy
