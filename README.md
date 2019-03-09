@@ -26,13 +26,14 @@
 
 A Webpack 4 boilerplate with build-in:
 
-- creation of HTML files to serve your webpack bundles
-- ECMAScript 6 to ECMAScript 5 transpiling
-- CSS extraction into a single file
-- SCSS support
-- Images import
-- Optimization/Minification
-- Github Pages publishing
+- creation of HTML files to serve your webpack bundles using [html-webpack-plugin](https://github.com/jantimon/html-webpack-plugin)
+- ECMAScript 6 to ECMAScript 5 transpiling with [babel](https://babeljs.io/) 
+- CSS extraction into a single file using [style-loader](https://github.com/webpack-contrib/style-loader), [css-loader](https://github.com/webpack-contrib/css-loader) and [css-mini-extract-plugin](https://github.com/webpack-contrib/mini-css-extract-plugin) 
+- SCSS support using [sass-loader](https://github.com/webpack-contrib/sass-loader) and [node-sass](https://github.com/sass/node-sass).
+- Images import with [file-loader](https://github.com/webpack-contrib/file-loader)
+- Optimization/Minification with [uglifyjs-webpack-plugin](https://github.com/webpack-contrib/uglifyjs-webpack-plugin) and [optimize-css-assets-webpack-plugin](https://github.com/NMFR/optimize-css-assets-webpack-plugin). 
+- Github Pages publishing using [gh-pages](https://www.npmjs.com/package/gh-pages)
+
 
 ## Project Structure
 
