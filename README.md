@@ -77,7 +77,7 @@ npm run build
 
 #### Deploy to Github Pages
 
-To deploy your code to **Github Pages**: it create a 'gh-pages' branch and serve the production bundle
+Deploy your code to **Github Pages**: this script creates a 'gh-pages' branch and serve the production bundle to this branch (ie. [https://leandrodci.github.io/webpack4-boilerplate/](https://leandrodci.github.io/webpack4-boilerplate/))
 
 ```
 npm deploy
