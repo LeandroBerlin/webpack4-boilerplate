@@ -13,7 +13,8 @@ A Webpack 4 boilerplate with build-in features:
 - CSS extraction into a single file
 - SCSS support
 - Images import
-- Optimization
+- Optimization/Minification
+- Github Pages publishing
 
 ## Project Structure
 
