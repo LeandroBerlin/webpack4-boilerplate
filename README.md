@@ -1,6 +1,6 @@
 # Webpack Boilerplate
 
-![Berlin](https://img.shields.io/badge/Built%20in-Berlin-critical.svg?logo=webpack) ![Code size](https://img.shields.io/github/languages/code-size/leandroDCI/webpack4-boilerplate.svg) [![MIT License](https://img.shields.io/github/license/leandroDCI/webpack4-boilerplate.svg)](LICENSE)
+![Berlin](https://img.shields.io/badge/Built%20in-Berlin-critical.svg?logo=webpack) ![Repo_size](https://img.shields.io/github/repo-size/LeandroDCI/webpack4-boilerplate.svg) [![MIT License](https://img.shields.io/github/license/leandroDCI/webpack4-boilerplate.svg)](LICENSE)
 
 
 - [Features](#features)
