@@ -2,6 +2,8 @@
 
 ![Berlin](https://img.shields.io/badge/Built%20in-Berlin-critical.svg?logo=webpack) ![Code size](https://img.shields.io/github/languages/code-size/leandroDCI/webpack4-boilerplate.svg) [![MIT License](https://img.shields.io/github/license/leandroDCI/webpack4-boilerplate.svg)](LICENSE)
 
+
+
 ## Features
 
 A Webpack 4 boilerplate with build-in features:
@@ -36,7 +38,36 @@ Project
 
 ```
 
-## Quick Setup
+### Commands
+
+#### Development
+
+Run **Webpack** in **Development** mode and start coding!
+
+```
+npm run dev
+```
+
+#### Production
+
+Run **Webpack** in **Production** mode.
+
+```
+npm run build
+```
+
+#### Deploy to Github Pages
+
+To deploy your code to **Github Pages**: it create a 'gh-pages' branch and serve the production bundle to it
+
+```
+npm deploy
+```
+
+
+## Setup
+
+### Quick Setup
 
 Create a directory for your new project, clone this repository, install the required modules and start coding!
 
@@ -47,11 +78,11 @@ npm i
 npm run dev
 ```
 
-## Complete setup
+### Complete setup
 
 This is the complete setup
 
-### Create your package.json and customize it
+#### Create your package.json and customize it
 
 ```
 
@@ -59,7 +90,7 @@ npm init
 
 ```
 
-### Install Webpack
+#### Install Webpack
 
 ```
 
@@ -81,7 +112,7 @@ module.exports = {
 };
 ```
 
-### Create files
+#### Create files
 Create a file in **/src/assets/js/index.js** and insert your JS code there.
 
 ```javascript
@@ -116,7 +147,7 @@ img {
 
 insert a logo.png image in **/src/assets/img/logo.png**
 
-### Add HTML to your generated Bundle
+#### Add HTML to your generated Bundle
 
 Install [html-webpack-plugin](https://github.com/jantimon/html-webpack-plugin) to add a index.html and generated Javascript bundle
 
@@ -161,7 +192,7 @@ plugins: [
 ];
 ```
 
-### Transplate your JS with Babel
+#### Transplate your JS with Babel
 
 Install [Babel](https://babeljs.io/) to transplate your ES6 down to ES5
 
@@ -189,7 +220,7 @@ and add the configuration to your **webpack.config.js**
 
 ```
 
-### Styling: import and inject CSS
+#### Styling: import and inject CSS
 
 To import and use CSS styles we need to add a [style-loader](https://github.com/webpack-contrib/style-loader) and [css-loader](https://github.com/webpack-contrib/css-loader). Css-loader will import content to a variable and style-loader will inject content into the HTML file as an inline tag. To support SCSS we also need to add [sass-loader](https://github.com/webpack-contrib/sass-loader) and [node-sass](https://github.com/sass/node-sass).
 
@@ -252,7 +283,7 @@ module.exports = {
   ]
 ```
 
-### Import images
+#### Import images
 
 To include images we need to configure [file-loader](https://github.com/webpack-contrib/file-loader)
 
@@ -281,7 +312,7 @@ and add the configuration for file-loader to your **webpack.config.js**
 
 ```
 
-### Optimize CSS and Javascript assets
+#### Optimize CSS and Javascript assets
 
 We want to optimize the webapp by minifying our assets with [uglifyjs-webpack-plugin](https://github.com/webpack-contrib/uglifyjs-webpack-plugin) and [optimize-css-assets-webpack-plugin](https://github.com/NMFR/optimize-css-assets-webpack-plugin). 
 Note: Webpack 4 optimizes JS bundle by default when using **production** mode.
@@ -311,18 +342,20 @@ module.exports = {
 
 ```
 
-### Run & Code
 
-Run **Webpack** in **Development** mode and start coding!
+#### Deploy to Github Pages
 
-```
-npm run dev
-```
+We want to publish files to a new branch (called gh-pages) on GitHub using the [gh-pages](https://www.npmjs.com/package/gh-pages) module. 
 
-### Production
-
-To run **Webpack** in **Production** mode use
 
 ```
-npm run build
+npm i -D gh-pages
 ```
+
+In **package.json** scripts add
+
+```javascript
+  "deploy": "npm run build && gh-pages -d dist",
+```
+
+This script help us to create a **gh-pages** branch on Github and also serve our bundled files on that branch.
