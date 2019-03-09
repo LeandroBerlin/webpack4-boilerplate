@@ -24,7 +24,7 @@
 
 ## Features
 
-A Webpack 4 boilerplate with build-in features:
+A Webpack 4 boilerplate with build-in:
 
 - creation of HTML files to serve your webpack bundles
 - ECMAScript 6 to ECMAScript 5 transpiling
