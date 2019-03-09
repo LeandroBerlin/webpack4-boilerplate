@@ -24,7 +24,7 @@
 
 ## Features
 
-A Webpack 4 boilerplate with build-in:
+A [Webpack 4](https://webpack.js.org/) boilerplate with build-in:
 
 - creation of HTML files to serve your webpack bundles using [html-webpack-plugin](https://github.com/jantimon/html-webpack-plugin)
 - ECMAScript 6 to ECMAScript 5 transpiling with [babel](https://babeljs.io/) 
@@ -379,3 +379,11 @@ In **package.json** scripts add
 ```
 
 This script help us to create a **gh-pages** branch on Github and also serve our bundled files on that branch.
+
+
+
+
+***
+
+Quality metadata badges from [shields.io](https://shields.io)
+
