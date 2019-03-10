@@ -3,6 +3,8 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
+const BrowserSyncPlugin = require('browser-sync-webpack-plugin')
+
 
 module.exports = {
   entry: "./src/assets/js/index.js",
@@ -89,6 +91,11 @@ module.exports = {
         removeComments: true,
         collapseWhitespace: true
       }
+    }),
+    new BrowserSyncPlugin({
+      host: 'localhost',
+      port: 3000,
+      server: { baseDir: ['dist'] }
     })
   ]
 };

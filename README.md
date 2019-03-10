@@ -16,6 +16,7 @@ A [Webpack 4](https://webpack.js.org/) boilerplate with build-in:
 - [Bootstrap](https://getbootstrap.com/) SCSS and [Fontawesome](https://fontawesome.com) local fonts support
 - Github Pages publishing using [gh-pages](https://www.npmjs.com/package/gh-pages)
 - Use aliases for easy imports
+- [BrowserSync](https://www.browsersync.io/) integration
 
 
   

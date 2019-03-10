@@ -25,6 +25,8 @@
     "@babel/preset-env": "^7.3.4",
     "autoprefixer": "^9.4.10",
     "babel-loader": "^8.0.5",
+    "browser-sync": "^2.26.3",
+    "browser-sync-webpack-plugin": "^2.2.2",
     "css-loader": "^2.1.1",
     "file-loader": "^3.0.1",
     "gh-pages": "^2.0.1",
@@ -41,6 +43,8 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.7.2",
-    "bootstrap": "^4.3.1"
+    "bootstrap": "^4.3.1",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.14.7"
   }
 }
