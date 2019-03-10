@@ -46,7 +46,8 @@ module.exports = {
             loader: "file-loader",
             options: {
               name: "[name].[ext]",
-              outputPath: "assets/img/"
+              outputPath: "assets/img/",
+              publicPath: '../img/'
             }
           }
         ]
@@ -63,6 +64,17 @@ module.exports = {
           }
         }]
       }
+    ]
+  },
+  resolve: {
+    alias: {
+      '@scss': path.resolve(__dirname, 'src/assets/scss'),
+      '@img': path.resolve(__dirname, 'src/assets/img'),
+      '@': path.resolve(__dirname, 'src')
+    },
+    modules: [
+      'node_modules',
+      path.resolve(__dirname, 'src')
     ]
   },
   plugins: [

@@ -1,7 +1,9 @@
-import "../scss/styles.scss";
-import logo from "../img/logo.png";
+import "@scss/styles.scss";
+import logoImg from "@img/logo.png";
 
-document.querySelector("#logo").src = logo
+
+let filename = logoImg.substring(logoImg.lastIndexOf('/') + 1);
+logo.src = `assets/img/${filename}`;
 
 let message = "Hello Webpack";
 console.log(` Message is: ${message}`);
