@@ -22,7 +22,7 @@
         - [Styling: import and inject CSS](#styling-import-and-inject-css)
         - [Import images](#import-images)
         - [Optimize CSS and Javascript assets](#optimize-css-and-javascript-assets)
-        - [Use Bootstrap and Fontawesome](#use-bootstrap--fontawesome)
+        - [Use Bootstrap](#use-bootstrap)
         - [Deploy to Github Pages](#deploy-to-github-pages-1)
 
 ## Features
@@ -365,7 +365,7 @@ module.exports = {
 
 ```
 
-#### Use Bootstrap & Fontawesome
+#### Use Bootstrap
 
 For Bootstrap to compile, we need to you install and use the required loaders: postcss-loader with autoprefixer.
 
@@ -395,7 +395,7 @@ and add the configuration to your **webpack.config.js**
 ```
 
 
-We can now install Bootstrap and Fontawesome modules
+We can now install Bootstrap module
 
 ```
 npm i bootstrap @fortawesome/fontawesome-free
@@ -418,6 +418,33 @@ In  **/src/assets/styles/styles.scss** import Bootstrap
 ...
 
 ```
+
+Create a new file In  **/src/assets/styles/custom.scss** and move your style there
+
+```scss
+
+$theme-colors: (
+  "primary": #666969,
+);
+
+$font-stack: Helvetica, sans-serif;
+
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+  text-align: center;
+}
+
+img {
+  max-width: 500px;
+}
+
+
+```
+
+
+
+
 
 #### Deploy to Github Pages
 
