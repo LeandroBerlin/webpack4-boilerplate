@@ -11,6 +11,7 @@ module.exports = {
     filename: "assets/js/bundle.js",
     publicPath: ""
   },
+  devtool: 'source-map',
   optimization: {
     minimizer: [new UglifyJsPlugin(), new OptimizeCSSAssetsPlugin()]
   },
