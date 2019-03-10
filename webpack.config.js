@@ -97,5 +97,9 @@ module.exports = {
       port: 3000,
       server: { baseDir: ['dist'] }
     })
-  ]
+  ],
+  performance: {
+    maxEntrypointSize: 1000000,
+    maxAssetSize: 1000000
+  }
 };
