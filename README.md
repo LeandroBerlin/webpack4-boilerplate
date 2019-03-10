@@ -22,7 +22,7 @@
         - [Styling: import and inject CSS](#styling-import-and-inject-css)
         - [Import images](#import-images)
         - [Optimize CSS and Javascript assets](#optimize-css-and-javascript-assets)
-        - [Use Bootstrap and Fontawesome](#use-bootstrap-and-fontawesome)
+        - [Use Bootstrap and Fontawesome](#use-bootstrap--fontawesome)
         - [Deploy to Github Pages](#deploy-to-github-pages-1)
 
 ## Features
