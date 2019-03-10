@@ -15,7 +15,7 @@ A [Webpack 4](https://webpack.js.org/) boilerplate with build-in:
 - Optimization/Minification with [uglifyjs-webpack-plugin](https://github.com/webpack-contrib/uglifyjs-webpack-plugin) and [optimize-css-assets-webpack-plugin](https://github.com/NMFR/optimize-css-assets-webpack-plugin). 
 - [Bootstrap](https://getbootstrap.com/) SCSS and [Fontawesome](https://fontawesome.com) local fonts support
 - Github Pages publishing using [gh-pages](https://www.npmjs.com/package/gh-pages)
-
+- Use aliases for easy imports
 
           
 
@@ -43,7 +43,8 @@ A [Webpack 4](https://webpack.js.org/) boilerplate with build-in:
         - [Optimize CSS and Javascript assets](#optimize-css-and-javascript-assets)
         - [Use Bootstrap](#use-bootstrap)
         - [Use FontAwesome](#use-fontawesome)
-        - [Deploy to Github Pages](#deploy-to-github-pages-1)
+        - [Deploy to Github Pages](#deploy-to-github-pages)
+        - [Use aliases](use-aliases)
 
 
 
@@ -513,10 +514,39 @@ In **package.json** scripts add
 
 This script help us to create a **gh-pages** branch on Github and also serve our bundled files on that branch.
 
+#### Use Aliases
+Using alias we'll simplify the imports. 
+Add the configuration to your **webpack.config.js**
+
+```javascript
+resolve: {
+    alias: {
+      '@scss': path.resolve(__dirname, 'src/assets/scss'),
+      '@img': path.resolve(__dirname, 'src/assets/img'),
+      '@': path.resolve(__dirname, 'src')
+    }
+  }
+  ```
 
 
+Edit  **/src/assets/js/index.js** and change
 
-***
+```javascript
 
-Quality metadata badges from [shields.io](https://shields.io)
+import "@scss/styles.scss";
+import logoImg from "@img/logo.png";
+
+let filename = logoImg.substring(logoImg.lastIndexOf('/') + 1);
+logo.src = `assets/img/${filename}`;
+
+```
+
+
+***  
+
+### Credits
+
+
+Quality metadata badges from [shields.io](https://shields.io)  
+Background image from [hepatternlibrary](http://thepatternlibrary.com/#fancy-pants)
 
