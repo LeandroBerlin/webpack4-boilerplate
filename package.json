@@ -40,6 +40,7 @@
     "webpack-cli": "^3.2.3"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.7.2",
     "bootstrap": "^4.3.1"
   }
 }

@@ -23,6 +23,7 @@
         - [Import images](#import-images)
         - [Optimize CSS and Javascript assets](#optimize-css-and-javascript-assets)
         - [Use Bootstrap](#use-bootstrap)
+        - [Use FontAwesome](#use-fontawesome)
         - [Deploy to Github Pages](#deploy-to-github-pages-1)
 
 ## Features
@@ -35,6 +36,7 @@ A [Webpack 4](https://webpack.js.org/) boilerplate with build-in:
 - SCSS support using [sass-loader](https://github.com/webpack-contrib/sass-loader) and [node-sass](https://github.com/sass/node-sass).
 - Images import with [file-loader](https://github.com/webpack-contrib/file-loader)
 - Optimization/Minification with [uglifyjs-webpack-plugin](https://github.com/webpack-contrib/uglifyjs-webpack-plugin) and [optimize-css-assets-webpack-plugin](https://github.com/NMFR/optimize-css-assets-webpack-plugin). 
+- [Bootstrap](https://getbootstrap.com/) SCSS and [Fontawesome](https://fontawesome.com) local fonts support
 - Github Pages publishing using [gh-pages](https://www.npmjs.com/package/gh-pages)
 
 
@@ -442,7 +444,48 @@ img {
 
 ```
 
+#### Use Fontawesome
 
+Install fontawesome
+
+```
+npm i @fortawesome/fontawesome-free
+```
+
+```
+In  **/src/assets/styles/styles.scss** set the path and import FA
+
+```scss
+...
+$fa-font-path: '~@fortawesome/fontawesome-free/webfonts';
+@import '~@fortawesome/fontawesome-free/scss/fontawesome';
+@import '~@fortawesome/fontawesome-free/scss/regular';
+@import '~@fortawesome/fontawesome-free/scss/solid';
+@import '~@fortawesome/fontawesome-free/scss/brands';
+...
+
+```
+
+and add the configuration to your **webpack.config.js**
+
+```javascript
+
+// in the configuration -> module -> rules 
+
+      //fonts
+      {
+        test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+        use: [{
+          loader: 'file-loader',
+          options: {
+            name: '[name].[ext]',
+            outputPath: 'assets/fonts/',
+            publicPath: '../fonts'
+          }
+        }]
+      },
+
+```
 
 
 
