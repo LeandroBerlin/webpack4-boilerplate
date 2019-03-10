@@ -1,4 +1,4 @@
-body{font:100% Helvetica,sans-serif}p{text-align:center}img{max-width:500px}button{margin:0 auto;display:block}
+body{font:100% Helvetica,sans-serif}.lead,h1{color:#fff}p{text-align:center}p button{margin:0 auto;padding:1em;display:block;margin-top:.5em!important}.img-fluid{max-width:100px!important}.masthead{height:100vh;min-height:500px;background-image:url(../img/bg.png);background-repeat:repeat}
 
 /*!
  * Bootstrap v4.3.1 (https://getbootstrap.com/)
