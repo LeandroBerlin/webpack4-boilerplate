@@ -17,9 +17,12 @@ A [Webpack 4](https://webpack.js.org/) boilerplate with build-in:
 - Github Pages publishing using [gh-pages](https://www.npmjs.com/package/gh-pages)
 
 
-***
+          
 
-## Content
+
+
+
+## Get Started
 
 
 - [Project Structure](#project-structure)
