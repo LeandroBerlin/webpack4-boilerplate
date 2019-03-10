@@ -1,16 +1,22 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:700');
 
-
+/* bootstrap scss override
 $theme-colors: (
   "primary": #666699,
-);
+); */
 
-$font-stack: Helvetica, sans-serif;
+$font-stack: 'Roboto', Helvetica, sans-serif!important;
 
 body {
-  font: 100% $font-stack;
+  font-family: $font-stack;
 }
 
-h1, .lead {  color: #fff;}
+h1, .lead, p {color: #fff;}
+
+button, span {
+  a, a:visited,  a:hover {color: #fff;text-decoration: none!important;}
+
+}
 
 p {  text-align: center;}
 
@@ -22,6 +28,7 @@ p button {
   margin-top: .5em!important;
 }
 
+span {margin: .3em}
 
 .img-fluid {max-width: 100px!important}
 
