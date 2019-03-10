@@ -12,7 +12,7 @@
     - [Production](#production)
     - [Deploy to Github Pages](#deploy-to-github-pages)
 - [Setup](#setup)
-    - [Quick Setup](#quick-setup)
+    - [Quick setup](#quick-setup)
     - [Complete setup](#complete-setup)
         - [Create your package.json and customize it](#create-your-packagejson-and-customize-it)
         - [Install Webpack](#install-webpack)
@@ -22,6 +22,7 @@
         - [Styling: import and inject CSS](#styling-import-and-inject-css)
         - [Import images](#import-images)
         - [Optimize CSS and Javascript assets](#optimize-css-and-javascript-assets)
+        - [Use Bootstrap and Fontawesome](#use-bootstrap-and-fontawesome)
         - [Deploy to Github Pages](#deploy-to-github-pages-1)
 
 ## Features
@@ -89,7 +90,7 @@ npm deploy
 
 ## Setup
 
-### Quick Setup
+### Quick setup
 
 Create a directory for your new project, clone this repository, install the required modules and start coding!
 
@@ -280,7 +281,6 @@ and add the configuration for css-mini-extract-plugin to your **webpack.config.j
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 // in the configuration -> module -> rules
-    //css extract
       {
         test: [/.css$|.scss$/],
         use: [
@@ -343,7 +343,8 @@ Note: Webpack 4 optimizes JS bundle by default when using **production** mode.
 npm i -D uglifyjs-webpack-plugin optimize-css-assets-webpack-plugin
 ```
 
-In webpack.config.js add
+and add the configuration to your **webpack.config.js**
+
 
 ```javascript
 // at the beginning of the file
@@ -364,6 +365,59 @@ module.exports = {
 
 ```
 
+#### Use Bootstrap & Fontawesome
+
+For Bootstrap to compile, we need to you install and use the required loaders: postcss-loader with autoprefixer.
+
+```
+npm i -D postcss-loader autoprefixer 
+```
+and add the configuration to your **webpack.config.js**
+
+```javascript
+
+
+// in the configuration -> module -> rules change
+
+      //style and css extract
+      {
+        test: [/.css$|.scss$/],
+        use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader", {
+          loader: 'postcss-loader',
+          options: {
+            plugins: () => [require('autoprefixer')({
+              'browsers': ['> 1%', 'last 2 versions']
+            })],
+          }
+        }]
+      },
+
+```
+
+
+We can now install Bootstrap and Fontawesome modules
+
+```
+npm i bootstrap @fortawesome/fontawesome-free
+```
+
+In  **/src/assets/js/index.js** import Bootstrap
+
+```javascript
+...
+import 'bootstrap';
+...
+
+```
+In  **/src/assets/styles/styles.scss** import Bootstrap
+
+```scss
+...
+@import "custom";
+@import "~bootstrap/scss/bootstrap";
+...
+
+```
 
 #### Deploy to Github Pages
 

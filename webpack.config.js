@@ -25,15 +25,17 @@ module.exports = {
           presets: ["@babel/preset-env"]
         }
       },
-      //style and css loaders
-      {
-        test: /\.css$/,
-        use: ["style-loader", "css-loader"]
-      },
-      //css extract
+      //style and css extract
       {
         test: [/.css$|.scss$/],
-        use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"]
+        use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader", {
+          loader: 'postcss-loader',
+          options: {
+            plugins: () => [require('autoprefixer')({
+              'browsers': ['> 1%', 'last 2 versions']
+            })],
+          }
+        }]
       },
       //image file loader
       {
