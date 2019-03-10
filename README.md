@@ -548,5 +548,5 @@ logo.src = `assets/img/${filename}`;
 
 
 Quality metadata badges from [shields.io](https://shields.io)  
-Background image from [hepatternlibrary](http://thepatternlibrary.com/#fancy-pants)
+Background image from [thepatternlibrary](http://thepatternlibrary.com/#fancy-pants)
 
