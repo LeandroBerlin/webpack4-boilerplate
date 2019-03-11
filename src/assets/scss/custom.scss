@@ -28,9 +28,14 @@ p button {
   margin-top: .5em!important;
 }
 
-span {margin: .6em}
+span {margin: .6em; display: inline-block;}
 
 .img-fluid {max-width: 100px!important}
+
+.techs{
+  max-width: 85vh;
+  margin: 0 auto;
+}
 
 .masthead {
   height: 100vh;

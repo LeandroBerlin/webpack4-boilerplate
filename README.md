@@ -51,6 +51,7 @@ A [Webpack 4](https://webpack.js.org/) boilerplate with build-in:
         - [Use FontAwesome](#use-fontawesome)
         - [Deploy to Github Pages](#deploy-to-github-pages)
         - [Use aliases](use-aliases)
+        - [Use BrowserSync](use-brosersync)
 
 
 
@@ -545,6 +546,30 @@ import logoImg from "@img/logo.png";
 let filename = logoImg.substring(logoImg.lastIndexOf('/') + 1);
 logo.src = `assets/img/${filename}`;
 
+```
+
+#### Use BrowserSync
+
+BrowserSync will start only when you run Webpack in watch mode.
+
+```javascript
+npm i -D browser-sync-webpack-plugin browser-sync
+```
+and add the configuration to your **webpack.config.js**
+
+```javascript
+//at the beginning of the file
+const BrowserSyncPlugin = require('browser-sync-webpack-plugin')
+
+//in the configuration -> plugins
+plugins: [
+  ...
+      new BrowserSyncPlugin({
+      host: 'localhost',
+      port: 3000,
+      server: { baseDir: ['dist'] }
+    })
+];
 ```
 
 
