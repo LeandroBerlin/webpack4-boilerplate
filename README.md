@@ -23,7 +23,7 @@ A [Webpack 4](https://webpack.js.org/) boilerplate with build-in:
   
   
   
-[DEMO](https://leandrodci.github.io/webpack4…)
+[DEMO](https://leandrodci.github.io/webpack4-boilerplate/)
 
   
   
