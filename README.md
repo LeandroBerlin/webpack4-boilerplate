@@ -316,7 +316,7 @@ module.exports = {
   plugins: [
     ...
     new MiniCssExtractPlugin({
-      filename: 'app.[contenthash:8].css',
+      filename: "assets/css/styles.css"
     }),
     ...
   ]
