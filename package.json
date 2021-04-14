@@ -22,7 +22,7 @@
   "homepage": "https://github.com/LeandroDCI/webpack4-boilerplate#readme",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.3",
-    "bootstrap": "^4.6.0",
+    "bootstrap": "^4.6.0"
   },
   "devDependencies": {
     "@babel/core": "^7.13.15",
