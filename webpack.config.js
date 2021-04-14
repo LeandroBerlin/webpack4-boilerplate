@@ -1,21 +1,20 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
-const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin')
-
+const TerserPlugin = require("terser-webpack-plugin");
 
 module.exports = {
   entry: "./src/assets/js/index.js",
   output: {
     path: path.resolve(__dirname, "dist/"),
     filename: "assets/js/bundle.js",
-    publicPath: ""
+    publicPath: "./"
   },
   devtool: 'source-map',
   optimization: {
-    minimizer: [new UglifyJsPlugin(), new OptimizeCSSAssetsPlugin()]
+    minimizer: [new TerserPlugin(), new CssMinimizerPlugin()]
   },
   module: {
     rules: [
@@ -31,14 +30,8 @@ module.exports = {
       //style and css extract
       {
         test: [/.css$|.scss$/],
-        use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader", {
-          loader: 'postcss-loader',
-          options: {
-            plugins: () => [require('autoprefixer')({
-              'browsers': ['> 1%', 'last 2 versions']
-            })],
-          }
-        }]
+        use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader'],
+
       },
       //image file loader
       {
@@ -49,7 +42,7 @@ module.exports = {
             options: {
               name: "[name].[ext]",
               outputPath: "assets/img/",
-              publicPath: '../img/'
+
             }
           }
         ]
@@ -62,7 +55,6 @@ module.exports = {
           options: {
             name: '[name].[ext]',
             outputPath: 'assets/fonts/',
-            publicPath: '../fonts'
           }
         }]
       }
